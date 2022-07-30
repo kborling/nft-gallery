@@ -1,5 +1,6 @@
 {
-  "name": "nft-example",
+  "name": "nft-gallery",
+  "author": "Kevin Borling",
   "version": "0.1.0",
   "private": true,
   "scripts": {
