@@ -8,7 +8,7 @@ type CollectionQuery = {
   limit: number
 }
 
-type Collection = {
+export type Collection = {
   name: string,
   external_link: string,
   description: string,
@@ -39,14 +39,14 @@ export default function handler(
         limit: 300
       }
       const options = {method: 'GET', headers: {Accept: 'application/json'}};
-      const url = 'https://api.opensea.io/api/v1/collections?offset=0&limit=300'
+      const url = 'https://api.opensea.io/api/v1/collections?offset=0&limit=100'
 
       fetch(url, options)
         .then((response: Response) => {
           res.status(response.status)
 
           if (response.ok)
-            response.json().then((data: Collection) => res.json(data))
+            response.json().then((data) => res.json(data))
               .catch(err => console.log(err))
         })
         .catch(err => console.error(err))
