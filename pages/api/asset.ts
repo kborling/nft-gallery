@@ -2,6 +2,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 // Based on https://docs.opensea.io/reference/asset-object
+type AssetQuery = {
+    owner: string,
+    token_ids: string,
+    limit: number,
+    cursor: string,
+    include_orders: string
+}
+
 type Assets = {
     assets: Asset[],
     next: string,
@@ -33,7 +41,7 @@ export default function handler(
     if (req.method) {
         if (req.method === 'GET') {
             const options = { method: 'GET' }
-            const url = ''
+            const url = 'https://api.opensea.io/api/v1/assets?order_direction=desc&limit=20&include_orders=false'
 
             // TODO: Update URL
             fetch('', options)

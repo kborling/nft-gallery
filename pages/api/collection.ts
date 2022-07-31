@@ -2,7 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 // Based on https://docs.opensea.io/reference/collection-model
-type CollectionQuery = {
+export type CollectionQuery = {
   asset_owner: string,
   offset: number,
   limit: number
@@ -14,6 +14,8 @@ export type Collection = {
   description: string,
   slug: string,
   image_url: string,
+  featured_image_url: string,
+  large_image_url: string,
   banner_image_url: string,
   dev_seller_fee_basis_points: string,
   safelist_request_status: string,
@@ -22,7 +24,9 @@ export type Collection = {
   traits: {},
   payment_tokens: string,
   editors: string,
-  stats: {}
+  stats: {},
+  hidden: boolean,
+  is_nsfw: boolean
 }
 
 export default function handler(
@@ -39,8 +43,8 @@ export default function handler(
         limit: 300
       }
       const options = {method: 'GET', headers: {Accept: 'application/json'}};
-      const url = 'https://api.opensea.io/api/v1/collections?offset=0&limit=100'
-
+      const url = 'https://api.opensea.io/api/v1/collections?offset=0&limit=200'
+      
       fetch(url, options)
         .then((response: Response) => {
           res.status(response.status)

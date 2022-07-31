@@ -43,7 +43,7 @@
 }
 
 .card h2 {
-    color: #fff;
+    /* color: #fff; */
     margin: 0 0 1rem 0;
     font-size: 1.5rem;
 }
@@ -54,6 +54,6 @@
     line-height: 1.5;
 }
 
-.card image {
-    max-width: 100%
+.card figure.image {
+    margin: 0
 }
