@@ -23,7 +23,8 @@ export default function handler(
     if (req.method) {
         if (req.method === 'GET') {
             const options = { method: 'GET' }
-            const url = 'https://api.opensea.io/api/v1/collection/doodles-official'
+            // TODO: Add url
+            const url = ''
 
             fetch(url, options)
                 .then((response: Response) => {

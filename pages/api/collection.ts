@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 
 // Based on https://docs.opensea.io/reference/collection-model
 export type CollectionQuery = {
-  asset_owner: string,
+  asset_owner?: string,
   offset: number,
   limit: number
 }

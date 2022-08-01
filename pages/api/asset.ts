@@ -44,7 +44,7 @@ export default function handler(
             const url = 'https://api.opensea.io/api/v1/assets?order_direction=desc&limit=20&include_orders=false'
 
             // TODO: Update URL
-            fetch('', options)
+            fetch(url, options)
                 .then((response: Response) => {
                     res.status(response.status)
 

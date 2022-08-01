@@ -15,10 +15,10 @@ export default function handler(
     if (req.method) {
         if (req.method === 'GET') {
             const options = { method: 'GET' }
+            // TODO: Add url
             const url = ''
 
-            // TODO: Update URL
-            fetch('', options)
+            fetch(url, options)
                 .then((response: Response) => {
                     res.status(response.status)
 

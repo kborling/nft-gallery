@@ -1,11 +1,9 @@
-import Head from 'next/head'
+import layoutStyles from '../styles/layout.module.scss'
 
 export default function Header() {
     return (
-        <Head>
-            <title>Digital Art Gallery</title>
-            <meta name="description" content="NFT Gallery demo" />
-            <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <header className={layoutStyles.header}>
+            <h1>Digital Art Gallery</h1>
+        </header>
     )
 }

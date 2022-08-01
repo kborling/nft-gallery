@@ -8,12 +8,14 @@
 }
 
 .main {
-    padding: 5rem 0;
-    flex: 1;
+    padding: 2.5rem 0;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
+    width: 100%;
 }
 
 .footer {
@@ -23,16 +25,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.footer img {
-    margin-left: 0.5rem;
-}
+    img {
+        margin-left: 0.5rem;
+    }
 
-.footer a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .grid {
@@ -43,10 +45,8 @@
 
     max-width: 1600px;
     margin-top: 3rem;
-}
 
-@media (max-width: 600px) {
-    .grid {
+    @media (max-width: 600px) {
         width: 100%;
         flex-direction: column;
     }
