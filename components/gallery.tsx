@@ -26,10 +26,6 @@ export default class Gallery extends Component<{ data: any }> {
                                                         className={cardStyles.image}
                                                     ></Image>
                                                 </div>
-                                                {/* <div className="content"> */}
-                                                {/* <h3 className={cardStyles.title}>{collection.name}</h3> */}
-                                                {/* <p className={cardStyles.description}>{collection.description}</p> */}
-                                                {/* </div> */}
                                             </div>
                                         </div>
                                     )
@@ -39,6 +35,5 @@ export default class Gallery extends Component<{ data: any }> {
                     </div>
                 </section>
             )
-        return (<h2>There are no NFTs to display :(</h2>)
     }
 }

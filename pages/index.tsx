@@ -20,7 +20,7 @@ export default class Home extends Component<{ data: any }> {
     }
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
 
     let data = null;
     try {
