@@ -2,7 +2,6 @@ import { loadCollection } from "../lib/load-collection";
 import Layout from "../components/layout"
 import Gallery from '../components/gallery';
 import Hero from "../components/hero";
-import Intro from "../components/intro";
 import Steps from "../components/steps";
 
 
