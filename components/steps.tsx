@@ -14,6 +14,7 @@ export default function Steps() {
                             <Image
                                 src={future}
                                 layout="responsive"
+                                alt="Transparent Future Illustration by William Tempest"
                             ></Image>
                             <figcaption><i>Transparent Future Illustration by
                                 <Link
@@ -38,7 +39,7 @@ export default function Steps() {
                                 <li>Deploying contract to the Ethereum chain</li>
                             </ul>
                             <Link href="https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/"
-                                target="_blank">
+                                  target="_blank">
                                 <button className="btn-link btn--sm">
                                     Follow Guide
                                 </button>
@@ -53,6 +54,7 @@ export default function Steps() {
                             <Image
                                 src={doge}
                                 layout="responsive"
+                                alt="Doge Using Computer Illustration by William Tempest"
                             ></Image>
                             <figcaption><i>Doge Using Computer Illustration by
                                 <Link
@@ -73,7 +75,7 @@ export default function Steps() {
                                 <li>Setting the supply amount</li>
                             </ul>
                             <Link href="https://support.opensea.io/hc/en-us/articles/360063498313-How-do-I-create-an-NFT-"
-                                target="_blank">
+                                  target="_blank">
                                 <button className="btn-link btn--sm">
                                     Follow Guide
                                 </button>
@@ -88,6 +90,7 @@ export default function Steps() {
                             <Image
                                 src={infrastructure}
                                 layout="responsive"
+                                alt="Transparent Architecture Illustration by William Tempest"
                             ></Image>
                             <figcaption><i>Transparent Architecture Illustration by
                                 <Link
@@ -102,7 +105,7 @@ export default function Steps() {
                             <h2>View Your Listing!</h2>
                             <p>This website pulls the latest collections from OpenSea, so be sure to check back and see your listing.</p>
                             <h3>So what&apos;s next for your NFT?</h3>
-                            <p>You never know if your NFT will be the next big trend. Here's some things that you can do to improve your chances of having a successful NFT.</p>
+                            <p>You never know if your NFT will be the next big trend. Here&apos;s some things that you can do to improve your chances of having a successful NFT.</p>
                             <ol>
                                 <li>Be proud of your work and offer a unique experience.</li>
                                 <li>Decide on a theme that represents you.</li>
