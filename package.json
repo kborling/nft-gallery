@@ -10,9 +10,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "cirrus-ui": "0.7.0-patch.1",
     "next": "12.2.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "three": "0.121.0",
+    "vanta": "^0.5.22"
   },
   "devDependencies": {
     "@types/node": "18.6.3",

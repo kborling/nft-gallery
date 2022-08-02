@@ -17,23 +17,24 @@
         .image {
             margin: 0
         }
-    }
-
-    .back {
-         transform: rotateY(180deg);
         .title {
-            font-size: 1.5rem;
+            font-size: 1rem;
             margin: 0 0 1rem 0;
         }
 
         .description {
-            font-size: 1.25rem;
+            font-size: 0.75rem;
             line-height: 1.5;
             margin: 0;
         }
     }
 
-    &.flipped {
+    .back {
+         transform: rotateY(180deg);
+    }
+
+    .flipped {
+        background-color: red;
         transform: rotateY(180deg);
     }
 }

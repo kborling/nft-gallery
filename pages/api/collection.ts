@@ -26,7 +26,8 @@ export type Collection = {
   editors: string,
   stats: {},
   hidden: boolean,
-  is_nsfw: boolean
+  is_nsfw: boolean,
+  created_date: Date
 }
 
 export default function handler(
@@ -35,15 +36,8 @@ export default function handler(
 ) {
   if (req.method) {
     if (req.method === 'GET') {
-
-      const query: CollectionQuery = {
-         // FIXME: Move to request query
-        asset_owner: '',
-        offset: 0,
-        limit: 300
-      }
       const options = {method: 'GET', headers: {Accept: 'application/json'}};
-      const url = 'https://api.opensea.io/api/v1/collections?offset=0&limit=200'
+      const url = 'https://api.opensea.io/api/v1/collections?offset=0&limit=100'
       
       fetch(url, options)
         .then((response: Response) => {
