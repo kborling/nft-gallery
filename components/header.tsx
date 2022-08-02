@@ -1,5 +1,3 @@
-import layoutStyles from '../styles/layout.module.scss'
-
 export default function Header() {
     return (
         <header className="header header-fixed unselectable header-animated">
@@ -15,7 +13,8 @@ export default function Header() {
                 </div>
                 <div className="nav-right">
                     <div className="nav-item">
-                        <a href="#">What Are NFTs?</a>
+                        <a href="#intro">What Are NFTs?</a>
+                        <a href="#steps">Create An NFT</a>
                         <a href="#gallery">NFT Gallery</a>
                     </div>
                 </div>

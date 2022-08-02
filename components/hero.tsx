@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import heroStyles from '../styles/hero.module.scss'
+// @ts-ignore
 import GLOBE from "vanta/dist/vanta.globe.min";
 import * as THREE from "three";
 import Link from 'next/link';
@@ -27,7 +28,9 @@ export default function Hero() {
             );
         }
         return () => {
-            if (vantaEffect) vantaEffect.destroy();
+            if (vantaEffect) { // @ts-ignore
+                vantaEffect.destroy();
+            }
         };
     }, [vantaEffect]);
     return (
@@ -38,7 +41,8 @@ export default function Hero() {
                         <div className="row">
                             <div className="col-6">
                                 <h1>Are you interested in making your own NFT?</h1>
-                                <p className="lead">Non-Fungible Tokens (NFTs) are unique digital items that represent real-world objects such as art, music, or in-game content.</p>
+                                <p className="lead">Non-Fungible Tokens (NFTs) are unique digital items that represent
+                                    real-world objects such as art, music, or in-game content.</p>
                                 <Link href="#steps">
                                     <button className="btn btn-link">
                                         Get Started

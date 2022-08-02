@@ -3,20 +3,25 @@ import Layout from "../components/layout"
 import Gallery from '../components/gallery';
 import Hero from "../components/hero";
 import Steps from "../components/steps";
+import { Collection } from "./api/collection";
+import {Component} from "react";
 
 
 
-export default function Home({ data }) {
-    return (
-        <Layout>
-            <Hero />
-            <Steps />
-            <Gallery data={data} />
-        </Layout>
-    )
+export default class Home extends Component<{ data: any }> {
+    render(): JSX.Element {
+        let {data} = this.props;
+        return (
+            <Layout>
+                <Hero/>
+                <Steps/>
+                <Gallery data={data}/>
+            </Layout>
+        )
+    }
 }
 
-export async function getServerSideProps(context) {
+export const getServerSideProps = async () => {
 
     let data = null;
     try {
@@ -30,4 +35,4 @@ export async function getServerSideProps(context) {
             data
         }
     };
-}
+};

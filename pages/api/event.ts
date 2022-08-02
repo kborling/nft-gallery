@@ -22,9 +22,8 @@ export default function handler(
 ) {
     if (req.method) {
         if (req.method === 'GET') {
-            const options = { method: 'GET' }
-            // TODO: Add url
-            const url = ''
+            const options = {method: 'GET', headers: {Accept: 'application/json'}};
+            const url = 'https://api.opensea.io/api/v1/events'
 
             fetch(url, options)
                 .then((response: Response) => {

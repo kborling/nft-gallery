@@ -40,10 +40,9 @@ export default function handler(
 ) {
     if (req.method) {
         if (req.method === 'GET') {
-            const options = { method: 'GET' }
+            const options = {method: 'GET', headers: {Accept: 'application/json'}};
             const url = 'https://api.opensea.io/api/v1/assets?order_direction=desc&limit=20&include_orders=false'
 
-            // TODO: Update URL
             fetch(url, options)
                 .then((response: Response) => {
                     res.status(response.status)
